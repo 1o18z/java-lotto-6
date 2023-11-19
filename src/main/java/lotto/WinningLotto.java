@@ -2,18 +2,17 @@ package lotto;
 
 import java.util.Collections;
 import java.util.List;
-
 import lotto.util.Generator;
 
-public class Lotto {
+public class WinningLotto {
 
     private final List<Integer> numbers;
 
-    public Lotto() {
+    public WinningLotto() {
         this.numbers = Generator.generateLotto();
     }
 
     public List<Integer> getNumbers() {
-        return Collections.unmodifiableList(this.numbers);
+        return Collections.unmodifiableList(numbers);
     }
 }
