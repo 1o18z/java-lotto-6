@@ -13,14 +13,14 @@ public class Parser {
         while (true) {
             purchasePrice = attemptParseInt();
             if (purchasePrice < DEFAULT_VALUE) {
-                OutputView.invalidFormat();
+                OutputView.printInvalidFormat();
                 continue;
             }
             if (validatePurchasePrice(purchasePrice)) {
                 OutputView.newLine();
                 break;
             }
-            OutputView.invalidPurchasePriceUnit();
+            OutputView.printInvalidPurchasePriceUnit();
         }
         return purchasePrice;
     }
