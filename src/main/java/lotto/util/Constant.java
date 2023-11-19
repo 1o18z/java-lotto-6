@@ -33,6 +33,5 @@ public class Constant {
     public static final String INVALID_LOTTO_LENGTH = "로또는 6개 숫자여야 합니다.";
     public static final String INVALID_LOTTO_UNIT = "로또 금액은 1,000원 단위여야 합니다.";
     public static final String INVALID_NUMBER = "올바른 숫자를 입력해 주세요.";
-    public static final String INVALID_LOTTO_RANGE = "로또 번호는 1부터 45 사이의 숫자여야 합니다.";
 
 }

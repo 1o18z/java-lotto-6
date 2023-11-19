@@ -1,27 +1,26 @@
-package lotto.util.message;
+package lotto.view;
 
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import lotto.result.Grade;
-import lotto.Lotto;
 
 import static lotto.util.Constant.DEFAULT_VALUE;
+import static lotto.util.Constant.ERROR;
+import static lotto.util.Constant.INVALID_BONUS_NUMBER;
+import static lotto.util.Constant.INVALID_LOTTO_UNIT;
+import static lotto.util.Constant.INVALID_NUMBER;
 
-public class OutputMessage extends Message {
+public class OutputView {
+
+    public static void newLine() {
+        System.out.println();
+    }
 
     public static void purchaseAmount(int count) {
         System.out.println(count + "개를 구매했습니다.");
-    }
-
-    public static void purchaseLotto(List<Lotto> lottoList) {
-        for (Lotto lotto : lottoList) {
-            System.out.println(lotto.getNumbers());
-        }
-        newLine();
     }
 
     public static void winningStatistics(Map<Grade, Integer> resultMap) {
@@ -48,5 +47,17 @@ public class OutputMessage extends Message {
             return String.format("5개 일치, 보너스 볼 일치 (%s원) - %d개", price, count);
         }
         return String.format("%d개 일치 (%s원) - %d개", grade.getMatchCount(), price, count);
+    }
+
+    public static void printInvalidBonusNumber() {
+        System.out.println(ERROR + INVALID_BONUS_NUMBER);
+    }
+
+    public static void printInvalidPurchasePriceUnit() {
+        System.out.println(ERROR + INVALID_LOTTO_UNIT);
+    }
+
+    public static void printInvalidFormat() {
+        System.out.println(ERROR + INVALID_NUMBER);
     }
 }
