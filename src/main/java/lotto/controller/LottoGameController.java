@@ -1,10 +1,10 @@
 package lotto.controller;
 
-import lotto.Bonus;
-import lotto.LottoList;
-import lotto.WinningLotto;
+import lotto.lotto.Bonus;
+import lotto.lotto.LottoList;
+import lotto.lotto.WinningLotto;
 import lotto.result.Calculator;
-import lotto.input.InputHandler;
+import lotto.view.InputHandler;
 import lotto.matching.Matcher;
 import lotto.result.Result;
 
